@@ -1,0 +1,50 @@
+{
+    "nodes":{
+        "borderWidthSelected": 4,
+        "color": {
+            "border": "rgba(132,48,51,0)",
+            "background": "rgba(252,238,242,0.7)",
+            "highlight": {
+                "border": "rgba(132,48,51,0.5)",
+                "background": "rgba(252,238,242,1)"
+            }
+        },
+       "font":{
+          "size": 60
+       },
+       "shape":"dot"
+    },
+    "edges":{
+            "arrows": {
+                "to": {
+                  "enabled": true,
+                  "scaleFactor": 0.5
+                },
+            "middle": {
+              "enabled": true,
+              "scaleFactor": 0.8
+            }
+        },
+       "arrowStrikethrough":false,
+       "color":{
+          "highlight":"rgba(132,48,51,1)",
+          "hover":"rgba(128,25,132,1)",
+          "inherit":false
+       },
+       "smooth":{
+          "type":"vertical",
+          "forceDirection":"none"
+       }
+    },
+    "physics":{
+       "barnesHut":{
+          "gravitationalConstant":-28000,
+          "springLength":1200,
+          "damping":1,
+          "centralGravity":5,
+          "springConstant":0.02,
+          "avoidOverlap":1
+       },
+       "minVelocity":6.75
+    }
+}

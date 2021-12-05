@@ -1,0 +1,11 @@
+{
+  "html_paths":[
+    {
+      "head_html": "sweater/templates/head.html",
+      "network_html": "sweater/templates/network.html"
+    }
+  ],
+  "graph":{
+    "size": 15
+  }
+}

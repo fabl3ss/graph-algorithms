@@ -1,0 +1,27 @@
+.label {
+    text-align: center;
+    text-transform: upper_moron_case;
+    font-family: sans-serif;
+    margin: 0px auto;
+    color: #fff;
+    font-size: 35px;
+    padding-bottom: 2%
+}
+
+form {
+    text-align:center;
+}
+
+form input {
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.col {
+    width: 50px;
+}

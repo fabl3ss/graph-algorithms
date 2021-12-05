@@ -1,8 +1,6 @@
 from pyvis.network import Network
 import numpy as np
 from math import isinf
-from sweater.build_page import build_page
-
 
 class MyNetwork:
     def __init__(self) -> None:
@@ -30,10 +28,6 @@ class MyNetwork:
                 if edge['from'] == i:
                     value += 1
             self.network.get_node(i)['value'] = value
-
-    def draw_graph(self):
-        self.network.write_html("sweater/templates/network.html")
-        build_page()
 
     def highlight_path(self, source, target, color="green"):
         edges = self.network.get_edges()

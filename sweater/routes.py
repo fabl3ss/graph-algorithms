@@ -28,10 +28,11 @@ def index():
         #        and I display the path on the screen using the dijkstra method.
         #        Need to figure out how to make another implementation
 
-        _, parent = graph.dijkstra.dijkstra_algorithm(graph.dijkstra.matrix.weights, int(form['source']))
         graph.network.restore_path()
+        _, parent = graph.dijkstra.dijkstra_algorithm(graph.dijkstra.matrix.weights, int(form['source']))
         graph.draw_path(parent, int(form['target']), int(form['source']))
-        graph.network.draw_graph()
+        graph.draw_graph()
+        print("HELLLO")
         return redirect(url_for('results'))
 
     return render_template("output.html")

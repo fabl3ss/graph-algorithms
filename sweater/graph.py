@@ -1,3 +1,4 @@
+from sweater.build_page import build_page
 from sweater.matrix import Matrix
 from sweater.net import MyNetwork
 from sweater.algorithms import Bellman, Dijkstra, Floyd, Johnson
@@ -8,7 +9,7 @@ class Graph:
         self.matrix = Matrix(size)
         self.network = MyNetwork()
         self.network.map_data(matrix=self.matrix.weights)
-        self.network.draw_graph()
+        self.draw_graph()
         self.size = size
 
         # Shortest path algorithms
@@ -16,6 +17,10 @@ class Graph:
         self.dijkstra = Dijkstra(self.matrix)
         self.floyd = Floyd(self.matrix)
         self.johnson = Johnson(self.matrix)
+
+    def draw_graph(self):
+        self.network.network.write_html("sweater/templates/network.html")
+        build_page()
 
     def draw_path(self, parent, j, source):
         if parent[j] == -1:

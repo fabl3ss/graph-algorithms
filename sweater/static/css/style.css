@@ -1,6 +1,6 @@
 .label {
     text-align: center;
-    text-transform: upper_moron_case;
+    text-transform: uppercase;
     font-family: sans-serif;
     margin: 0px auto;
     color: #fff;

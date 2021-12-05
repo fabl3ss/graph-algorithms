@@ -1,1 +1,1 @@
-{"response": [{"algorithm": "FLOYD", "source": 2, "target": 3, "dist": 8, "path": "2 13 14 1 9 3 "}]}
+{"response": [{"algorithm": "DIJKSTRA", "source": 2, "target": 3, "dist": 4, "path": "2 10 27 3 "}]}

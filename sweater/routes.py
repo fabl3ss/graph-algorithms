@@ -14,13 +14,14 @@ def results():
 @app.route('/', methods=['GET', 'POST'])
 def index():
     form = request.form.to_dict()
-    if 'algorithm' in form:
+    print(request.form)
+    if 'algorithm' in form and 'source' in form and 'target' in form:
         sorts = {
             'dijkstra': graph.dijkstra.run,
             'floyd': graph.floyd.run,
             'johnson': graph.dijkstra.run,
             'bellman': graph.bellman.run
-        }
+        }   
         sorts[form['algorithm']](int(form['source']), int(form['target']))
 
         # FIXME: since the path search in each algorithm is unique,
@@ -32,7 +33,6 @@ def index():
         _, parent = graph.dijkstra.dijkstra_algorithm(graph.dijkstra.matrix.weights, int(form['source']))
         graph.draw_path(parent, int(form['target']), int(form['source']))
         graph.draw_graph()
-        print("HELLLO")
         return redirect(url_for('results'))
 
     return render_template("output.html")

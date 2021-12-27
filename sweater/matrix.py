@@ -19,4 +19,3 @@ class Matrix:
             for j in range(self.size):
                 if self.adjacency[i][j] == 1:
                     self.weights[i][j] = randint(0, 10)
-

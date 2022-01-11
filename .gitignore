@@ -1,2 +1,6 @@
 .idea/
 venv/
+Procfile
+runtime.txt
+graph-algorithms/
+sweater/templates/network.html
